@@ -11,6 +11,6 @@ Explore, discover, and connect with unique leisure spots using Outsidee! This ap
 - Vendors can promote their spots and connect with their target customers.
 
 
-Website: [https://www.outsidee.com](https://www.outsidee.com)
+Website: [https://www.outsidee.com](https://www.outsidee.net)
 Contact: contact@outsidee.com
 Follow us on [Facebook](https://www.facebook.com/outsidee) | [Instagram](https://www.instagram.com/outsidee) | [Twitter](https://www.twitter.com/outsidee)
