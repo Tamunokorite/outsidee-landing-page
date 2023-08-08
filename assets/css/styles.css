@@ -1,0 +1,211 @@
+/* Global Styles */
+body {
+    /* font-family: Arial, sans-serif; */
+    margin: 0;
+    padding: 0;
+}
+
+body, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    /* font-family: 'Bangers', sans-serif; */
+    font-family: 'Fredoka One', sans-serif;
+}
+
+/* Header */
+/* header {
+    background-color: #040100;
+    color: #FFFFFF;
+    padding: 20px;
+} */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+header.scrolled {
+    background-color: rgba(4, 1, 0, 0.9);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+.waitlist-cta {
+    margin-left: auto;
+    margin-right: 20px;
+    display: none;
+    opacity: 0; /* Start with opacity set to 0 for animation */
+    transform: translateY(100%); /* Start with element below the view */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.waitlist-cta.scrolled {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.waitlist-cta a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo img {
+    max-width: 150px;
+}
+
+/* Hero Section */
+/* .hero {
+    background-color: #E16D3C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 80px 0;
+} */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+} */
+
+.hero-content {
+    position: absolute;
+    color: #FFFFFF;
+    bottom: 20px;
+    left: 20px;
+    color: #FFFFFF;
+    max-width: 600px;
+    z-index: 1;
+}
+
+.arrow-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    animation: bounce 2s infinite; /* Add bounce animation */
+}
+
+.arrow-link i {
+    font-size: 24px;
+    color: #E16D3C;
+}
+
+/* Add bounce animation keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px); /* Adjust bounce height */
+    }
+}
+
+
+.btn-join {
+    display: inline-block;
+    background-color: #E16D3C;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Features Section */
+.features {
+    background-color: #FFFFFF;
+    color: #040100;
+    padding: 60px 0;
+    text-align: center;
+    scroll-snap-type: y mandatory;
+}
+
+.feature {
+    scroll-snap-align: start;
+}
+
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 16px;
+}
+
+
+/* Waitlist Section */
+.waitlist {
+    background-color: #E16D3C;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.waitlist h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.waitlist p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-icons a {
+    margin: 0 10px;
+}
+
+footer {
+    background-color: #E16D3C;
+}
+
+footer a, footer i {
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+    .bounce-arrow {
+        display: none;
+    }
+
+    .waitlist-cta.scrolled {
+        opacity: 0;
+    }
+}
