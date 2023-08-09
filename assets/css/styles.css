@@ -59,6 +59,7 @@ nav {
     display: block;
     opacity: 1;
     transform: translateY(0);
+    padding-top: 0.6rem;
 }
 
 .waitlist-cta a {
@@ -215,8 +216,8 @@ video {
 /* Features Section */
 /* Update Features Section Styles */
 .features {
-    background-color: #040100;
-    color: #E16D3C;
+    background-color: #FFFFFF;
+    color: #444;
     padding: 60px 0;
     overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
 }
@@ -252,24 +253,17 @@ video {
     height: 100vh;
     position: relative; /* Required for absolute positioning */
     /* scroll-snap-align: start; Snap each feature */
-    padding-top: 50px;
-    padding-left: 130px;
     text-align: center;
     box-sizing: border-box;
 }
 
-/* .feature.feature-1 {
-    padding-left: 5rem;
-} */
+.feature.feature-1, .feature.feature-3 {
+    padding-left: 60vw;
+    width: 150vw;
+}
 
 .feature.feature-2 {
     margin-left: 100vw;
-    padding-left: 100px;
-}
-
-.feature.feature-3 {
-    padding-left: 150px;
-    height: 75vh;
 }
 
 /* Adjust other feature styles as needed */
