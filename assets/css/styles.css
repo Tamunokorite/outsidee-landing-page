@@ -33,7 +33,7 @@ header {
 }
 
 header.scrolled {
-    background-color: rgba(4, 1, 0, 0.9);
+    background-color: rgba(4, 1, 0, 1);
 }
 
 nav {
@@ -62,7 +62,7 @@ nav {
 }
 
 .waitlist-cta a {
-    color: #FFFFFF;
+    color: #E16D3C;
     text-decoration: none;
 }
 
@@ -101,9 +101,9 @@ video {
 
 .hero-content {
     position: absolute;
-    color: #FFFFFF;
-    bottom: 20px;
+    /* top: 50%; */
     left: 20px;
+    bottom: 20px;
     color: #FFFFFF;
     max-width: 600px;
     z-index: 1;
@@ -122,6 +122,73 @@ video {
 .arrow-link i {
     font-size: 24px;
     color: #E16D3C;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+
+.play-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.video-controls button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #444;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: #E16D3C;
 }
 
 /* Add bounce animation keyframes */
@@ -146,18 +213,72 @@ video {
 }
 
 /* Features Section */
+/* Update Features Section Styles */
 .features {
-    background-color: #FFFFFF;
-    color: #040100;
+    background-color: #040100;
+    color: #E16D3C;
     padding: 60px 0;
-    text-align: center;
-    scroll-snap-type: y mandatory;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
+}
+
+.feature-container {
+    display: block; /* Use flexbox to create horizontal layout */
+    width: 300%; /* Set the width to accommodate three features */
+    height: 275vh; /* Take up full viewport height */
+    position: relative; /* Required for absolute positioning of features */
+    animation: animate-features 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes animate-features {
+    0% {
+        margin-left: 0;
+    }
+
+    50% {
+        margin-left: -100vw;
+    }
+
+    100% {
+        margin-left: 0;
+    }
 }
 
 .feature {
-    scroll-snap-align: start;
+    width: 100vw; /* Take up full viewport width */
+    height: 100vh;
+    position: relative; /* Required for absolute positioning */
+    /* scroll-snap-align: start; Snap each feature */
+    padding-top: 50px;
+    padding-left: 130px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
+/* .feature.feature-1 {
+    padding-left: 5rem;
+} */
+
+.feature.feature-2 {
+    margin-left: 100vw;
+    padding-left: 100px;
+}
+
+.feature.feature-3 {
+    padding-left: 150px;
+    height: 75vh;
+}
+
+/* Adjust other feature styles as needed */
+
+
+/* Adjust other feature styles as needed */
+
+
+/* Adjust other styles as needed for feature content */
 .features h2 {
     font-size: 24px;
     margin-bottom: 10px;
@@ -166,6 +287,25 @@ video {
 .features p {
     font-size: 16px;
 }
+
+/* Hide horizontal scrollbar */
+.features::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* .feature {
+    scroll-snap-align: start;
+} */
+
+/* .features h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.features p {
+    font-size: 16px;
+} */
 
 
 /* Waitlist Section */
@@ -200,12 +340,18 @@ footer a, footer i {
 }
 
 
-@media (max-width: 768px) {
-    .bounce-arrow {
+@media (min-width: 768px) {
+    /* .bounce-arrow {
         display: none;
+    } */
+
+    .hero-content {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; /* Center align the text */
     }
 
-    .waitlist-cta.scrolled {
+    /* .waitlist-cta.scrolled {
         opacity: 0;
-    }
+    } */
 }
