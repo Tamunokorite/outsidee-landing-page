@@ -3,7 +3,7 @@ body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
-    background-color: #E16D3C;
+    background-color: #040100;
 }
 
 body, p {
@@ -137,11 +137,11 @@ video {
 .feature-container {
     display: block; /* Use flexbox to create horizontal layout */
     width: 300%; /* Set the width to accommodate three features */
-    height: auto; /* Take up full viewport height */
+    height: 300vh; /* Take up full viewport height */
     position: relative; /* Required for absolute positioning of features */
     animation: animate-features 1s linear infinite;
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
+    animation-delay: calc(var(--scroll) * -0.9s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
@@ -152,7 +152,7 @@ video {
     }
 
     50% {
-        margin-left: -100vw;
+        margin-left: -200vw;
     }
 
     100% {
@@ -162,27 +162,28 @@ video {
 
 .feature {
     width: 100vw; /* Take up full viewport width */
-    height: 30vh;
+    height: 100vh;
     position: relative; /* Required for absolute positioning */
     /* scroll-snap-align: start; Snap each feature */
     text-align: center;
     box-sizing: border-box;
+    padding: 20px;
 }
 
 .feature.feature-1, .feature.feature-3 {
-    padding-left: 60vw;
-    width: 150vw;
+    margin-left: 100vw;
+    width: 100vw;
 }
 
 .feature.feature-2 {
-    margin-left: 102vw;
+    margin-left: 200vw;
     /* padding-left: 30vw; */
-    margin-top: -2vh;
+    /* margin-top: 5vh */
 }
 
 .feature.feature-3 {
     margin-top: -5vh;
-    padding-left: 70vw;
+    /* padding-left: 70vw; */
 }
 
 
@@ -193,36 +194,49 @@ video {
 
 
 /* Adjust other styles as needed for feature content */
-.features h2 {
+.feature h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    /* margin: 0; */
+    text-align: center;
 }
 
-.features p {
+.feature-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+.feature p {
     font-size: 16px;
+    text-align: center;
+    flex: 1;
+    /* margin-left: 75px; */
+}
+
+/* .feature.feature-1 p {
+    text-align: left;
+} */
+
+.arrow {
+    font-size: 70px;
+    color: #E16D3C;
+    position: absolute;
+}
+
+.arrow.arrow-1 {
+    left: 50vw;
+    top: 60vh;
+}
+
+.arrow.arrow-2 {
+    left: 40vw;
+    top: 60vh;
 }
 
 /* Hide horizontal scrollbar */
 .features::-webkit-scrollbar {
     display: none;
 }
-
-.arrow {
-    font-size: 70px;
-    color: #E16D3C;
-}
-/* .feature {
-    scroll-snap-align: start;
-} */
-
-/* .features h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.features p {
-    font-size: 16px;
-} */
 
 
 /* Waitlist Section */
@@ -259,6 +273,7 @@ footer {
     text-align: center;
     color: #FFFFFF;
     padding: 10px;
+    margin-top: -3px;
 }
 
 footer a {
@@ -282,14 +297,14 @@ footer a, footer i {
         text-align: center; /* Center align the text 
     } */
 
-    .features p {
+    /* .features p {
         width: 300px;
         margin-left: 35vw;
     }
 
     .feature.feature-2 p {
         margin-left: 40vw;
-    }
+    } */
 
     /* .waitlist-cta.scrolled {
         opacity: 0;
