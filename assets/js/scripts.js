@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 const video = document.querySelector('video');
 
-video.muted = true; // Start with video muted
+// video.muted = true; // Start with video muted
 
 video.addEventListener('click', () => {
     if (video.paused) {

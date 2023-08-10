@@ -22,6 +22,10 @@ h1, h2, h3 {
     padding: 20px;
 } */
 
+iframe {
+    display: none;
+}
+
 header {
     position: fixed;
     top: 0;
