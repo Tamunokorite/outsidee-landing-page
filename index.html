@@ -4,79 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Outsidee - Where the Party Never Stops!</title>
-    <link rel="shortcut icon" href="./assets/media/images/outsidee-logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/media/images/outsidee-logo-trans.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@400;600&display=swap"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex&family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <nav>
             <div class="logo">
-                <img src="./assets/media/images/outsidee-logo.svg" alt="Outsidee Logo">
+                <img src="./assets/media/images/outsidee-logo-trans.png" alt="Outsidee Logo">
             </div>
-            <div class="waitlist-cta">
-                <a href="https://getwaitlist.com/waitlist/9673">JOIN OUR WAITLIST</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#hero">HOME</a></li>
+                    <li><a href="#features">FEATURES</a></li>
+                    <li><a href="#explorers">FOR EXPLORERS</a></li>
+                    <li><a href="#vendors">FOR VENDORS</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                </ul>
+            </div>
+            <div class="waitlist-cta-container">
+                <a href="https://getwaitlist.com/waitlist/9673" target="_blank">
+                    <button class="waitlist-cta">
+                        JOIN OUR WAITLIST
+                    </button>
+                </a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
-    <section class="hero">
-        <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> <!-- Allows video to autoplay unmuted -->
-        <video autoplay playsinline loop>
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <!-- <iframe src="https://olafwempe.com/mp3/silence/silence.mp3" type="audio/mp3" allow="autoplay" id="audio" style="display:none"></iframe> -->
+        <video autoplay playsinline loop muted>
             <source src="./assets/media/videos/crazzy club party part-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-content">
-            <h1>Adventure Awaits!!!</h1>
-            <p>
-                Step into an extraordinary world of unique spots with Outsidee as your guide. Go on exciting journeys, uncover hidden treasures, and make unforgettable connections for a world tailor-made for explorers like you.
-            </p>
-
-            <!-- <a href="https://getwaitlist.com/waitlist/9673" class="btn-join">Join Our Waitlist</a> -->
+            <h1>Outsidee</h1>
+            <p>Find entertainment at your fingertips!</p>
         </div>
-        <!-- <a href="#features" class="arrow-link">
-            <i class="fas fa-chevron-down"></i>
-        </a> -->
     </section>
+    <!-- <h1>Find entertainment at your fingertips. <br>Let's simplify being outsidee for you!</h1>  -->
+
+    <!-- Features Section -->
     <section class="features" id="features">
         <div class="feature-container">
+            <h2 data-aos="fade-left">Let's simplify being <span class="orange-text">outsidee</span> for you!</h2>
             <div class="feature feature-1">
-                <h2>Discover the Hottest Spots</h2>
                 <div class="feature-content">
+                    <div class="image-circle">
+                        <img src="./assets/media/images/food.jpg" alt="">
+                    </div>
                     <p>
-                        From cozy hangouts and charming spots to sprawling parks, serene beaches, and lively entertainment zones, Outsidee delivers an array of sensational vibes. Plus, be the first to catch the buzz on upcoming events that'll keep your groove on fire!
+                        We provide an accurate search engine that enables you find the perfect entertainment spot to suit your needs
                     </p>
-                    <span class="arrow arrow-1">&rdca;</span>
+                </div>
+                <div class="arrow arrow-1">
+                    <img src="./assets/media/images/outsidee-arrow-flipped.svg" alt="">
                 </div>
             </div>
             <div class="feature feature-2">
-                <h2>Real Stories, Real Vibes!</h2>
-                <p>Step right into the action with reviews that give you front-row access! Dive into fellow explorers' cool tales, stunning visuals, and videos that teleport you. It's like getting a sneak peek before you hit the scene!</p>
-                <span class="arrow arrow-2">&ldca;</span>
+                <div class="feature-content">
+                    <div class="image-circle">
+                        <img src="./assets/media/images/food.jpg" alt="">
+                    </div>
+                    <p>Sometimes, it’s hard to search when you are unsure but we’ve got you covered.</p>
+                </div>
+                <div class="arrow arrow-2">
+                    <img src="./assets/media/images/outsidee-arrow.svg" alt="">
+                </div>
             </div>
             <div class="feature feature-3">
-                <h2>Your Time to Shine!</h2>
-                <p>Ready to make waves? If you're a vendor with a spot that rocks, look no further! Outsidee is your ultimate stage to connect with your dream crowd, showcasing your spot like never before and sparking a buzz that can't be ignored.</p>
+                <div class="image-circle">
+                    <img src="./assets/media/images/food.jpg" alt="">
+                </div>
+                <p>We provide you with recommendations and update about popping spots, trending places and upcoming events</p>
             </div>
         </div>
     </section>
+
+
+    <!-- For Explorers -->
+    <section class="explorers" id="explorers">
+        <div class="card">
+            <div class="content">
+                <div class="heading">
+                    <h3>For Explorers</h3>
+                    <p>As an explorer you are able to:</p>
+                </div>
+                <div class="body">
+                    <ul>
+                        <li>Discover locations due to our accurate search engine</li>
+                        <li>Get recommendations based on explorers preference</li>
+                        <li>Find important details about leisure spots</li>
+                        <li>Get engaging reviews from other explorers in form of comments, pictures and videos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="vendors" id="vendors">
+        <div class="card">
+            <div class="content">
+                <div class="heading">
+                    <h3>For Vendors</h3>
+                    <p>
+                        We're calling on restaurants, clubs, parks, event/party planners/promoters, tour guides, hotels, bars, loungers, cafes, gardens, apartments etc.
+                     </p>
+                     <p>
+                        This is your chance to:
+                     </p>
+                </div>
+                <div class="body">
+                    <ul>
+                        <li>Find your target customers</li>
+                        <li>Become more visible</li>
+                        <li>Have more opportunities to engage with customers reviews</li>
+                        <li>Increase your traffic and clientele with Outsidee</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Section -->
     <section class="waitlist">
         <h2>Join the Epic Ride!</h2>
         <p>Don't miss out on the fun! <a href="https://getwaitlist.com/waitlist/9673">Join our Waitlist</a> NOW!</p>
     </section>
-    <footer>
+
+    <!-- Footer -->
+    <footer id="contact">
         <h2>Stay Connected</h2>
         <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-        <a href="tel:+2348020877507"><i class="fa fa-phone" aria-hidden="true"></i> </a>
+        <a href="tel:+2348020877507"><i class="fa fa-phone" aria-hidden="true"></i></a>
         <a href="#"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
         <a href="#"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
         <a href="#"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
     </footer>
-    <!-- Testing name change -->
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

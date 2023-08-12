@@ -1,22 +1,37 @@
+
+const video = document.querySelector('video');
+const header = document.querySelector('header');
+const menuToggle = document.querySelector(".mobile-menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const waitlistCTA = document.querySelector(".waitlist-cta");
+
 // JavaScript to change navigation background on scroll
 window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    const waitlist_cta = document.querySelector('.waitlist-cta');
-    if (window.scrollY > 0) {
-        header.classList.add('scrolled');
-        waitlist_cta.style.display = 'block'; // Show the element
-        setTimeout(function () {
-            waitlist_cta.classList.add('scrolled');
-        }, 10);
-    } else {
-        header.classList.remove('scrolled');
-        waitlist_cta.classList.remove('scrolled');
-        waitlist_cta.style.display = 'none'
-    }
+    // const navLinks = document.querySelector('.nav-links');
+    // if (window.scrollY > 0) {
+    //     header.classList.add('scrolled');
+    //     // navLinks.style.display = 'block'; // Show the element
+    //     // setTimeout(function () {
+    //     //     navLinks.classList.add('scrolled');
+    //     // }, 10);
+    // } else {
+    //     header.classList.remove('scrolled');
+    //     // navLinks.classList.remove('scrolled');
+    //     // navLinks.style.display = 'none'
+    // }
 
     document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        waitlistCTA.classList.toggle("active");
+    });
+});
+
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -28,9 +43,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-const video = document.querySelector('video');
-
-// video.muted = true; // Start with video muted
 
 video.addEventListener('click', () => {
     if (video.paused) {
@@ -40,3 +52,5 @@ video.addEventListener('click', () => {
         video.pause(); // Pause if playing
     }
 });
+
+AOS.init();
