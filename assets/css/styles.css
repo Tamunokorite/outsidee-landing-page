@@ -575,13 +575,18 @@ footer * {
 
     .vendors, .explorers {
         width: 45%;
-        display: inline-flex;
+        display: flex;
     }
 
     .vendors .card, .explorers .card {
         height: 80vh;
         width: 100%;
         transition: .4s;
+    }
+
+    .card .heading p {
+        width: 80%;
+        font-size: 0.8rem;
     }
 
     .card:hover{
