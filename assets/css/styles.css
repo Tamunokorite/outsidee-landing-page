@@ -8,11 +8,11 @@ body {
 }
 
 body, p {
-    font-family: 'Roboto Flex', 'Open Sans', sans-serif;
+    font-family: 'Inter', 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: 'Concert One', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .orange-text {
@@ -233,7 +233,7 @@ h2 {
 }
 
 .card .heading p {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .card .heading p {
@@ -247,6 +247,7 @@ h2 {
 
 .card .heading h3 {
     font-size: 1.4rem;
+    word-spacing: 5px;
     font-weight: bold;
     margin-bottom: 5px;
     width: 100%;
@@ -254,8 +255,9 @@ h2 {
 
 .card .body {
     display: flex;
-    padding-left: 30px;
+    padding-left: 25px;
     padding-top: 15px;
+    line-height: 1.4;
 }
 
 .card ul li {
@@ -464,11 +466,20 @@ footer {
 
 footer a {
     margin: 3px;
+    text-decoration: underline !important;
 }
 
 footer a, footer i {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+footer * {
+    margin-bottom: 15px;
 }
 
 /* Media Queries */
@@ -575,6 +586,21 @@ footer a, footer i {
 
     .card:hover{
         transform: scale(1.04) !important;
+    }
+
+    footer h2 {
+        display: none;
+    }
+
+    footer p {
+        margin-top: 0;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 30px;
     }
 }
 
