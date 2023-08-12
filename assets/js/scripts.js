@@ -52,5 +52,3 @@ video.addEventListener('click', () => {
         video.pause(); // Pause if playing
     }
 });
-
-AOS.init();
