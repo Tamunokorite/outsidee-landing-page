@@ -1,54 +1,59 @@
+// window.addEventListener("scroll", function () {
+//     const header = document.querySelector("header");
+//     const nav = document.querySelector("nav");
+//     if (window.scrollY > 0) {
+//         nav.classList.add("scrolled-header");
+//         nav.classList.remove("transparent-header");
+//     } else {
+//         nav.classList.add("transparent-header");
+//         nav.classList.remove("scrolled-header");
+//     }
+// });
 
-const video = document.querySelector('video');
-const header = document.querySelector('header');
-const menuToggle = document.querySelector(".mobile-menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const waitlistCTA = document.querySelector(".waitlist-cta");
+const video = document.querySelector('#video-hero');
+const playPauseButton = document.getElementById("play-pause-button");
+const muteUnmuteButton = document.getElementById("mute-unmute-button");
 
-// JavaScript to change navigation background on scroll
-window.addEventListener('scroll', function () {
-    // const navLinks = document.querySelector('.nav-links');
-    // if (window.scrollY > 0) {
-    //     header.classList.add('scrolled');
-    //     // navLinks.style.display = 'block'; // Show the element
-    //     // setTimeout(function () {
-    //     //     navLinks.classList.add('scrolled');
-    //     // }, 10);
-    // } else {
-    //     header.classList.remove('scrolled');
-    //     // navLinks.classList.remove('scrolled');
-    //     // navLinks.style.display = 'none'
-    // }
-
-    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
-
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-        waitlistCTA.classList.toggle("active");
-    });
-});
-
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-
-video.addEventListener('click', () => {
+function togglePlayPause() {
     if (video.paused) {
-        video.muted = false; // Unmute the video
-        video.play(); // Start playing
+        video.play();
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
     } else {
-        video.pause(); // Pause if playing
+        video.pause();
+        playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
     }
-});
+}
+
+function toggleMuteUnmute() {
+    if (video.muted) {
+        video.muted = false;
+        muteUnmuteButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+    } else {
+        video.muted = true;
+        muteUnmuteButton.innerHTML = '<i class="fas fa-volume-off"></i>';
+    }
+}
+
+const text = "Find entertainment at your fingertips";
+const typingTarget = document.getElementById("typing-target");
+let index = 0;
+
+function typeText() {
+    typingTarget.innerHTML = text.slice(0, index) + "<span id='cursor'>|</span>";
+    index++;
+
+    if (index <= text.length) {
+        setTimeout(typeText, 70);
+    } else {
+        // cursor.style.display = "none"; // Hide cursor when typing is done
+        const cursor = document.querySelector("#cursor");
+
+        cursor.classList.add("cursor");
+    }
+} 
+
+setTimeout(function() {
+    typeText();
+}, 1000);
+
+
