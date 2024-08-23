@@ -1,10 +1,10 @@
 :root {
     --brand-color: #E16D3C;
-    --black-color: #040100;
-    --darkest-color: #161F33;
+    --black-color: #111111;
+    --darkest-color: #111111;
     --darkest-color-rgba: rgba(16, 25, 33, 0.4);
-    --dark-color: #2E3B58;
-    --mid-color: #FC9A48;
+    --dark-color: #111111;
+    --mid-color: #E16D3C;
     --light-color: #E4DFCA;
     --lightest-color: #f7f7f9;
 }
@@ -20,16 +20,33 @@ body {
     width: 100%;
 }
 
+.accordion-button {
+    background-color: var(--darkest-color);
+    color: white;
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: var(--brand-color);
+    color: white;
+  }
+
+  .accordion-button:after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+  .accordion-button:not(.collapsed):after{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+
 a {
     color: var(--light-color);
 }
 
 body, p {
-    font-family: 'Poppins', 'Open Sans', sans-serif;
+    font-family: 'Josefin Sans', 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 /* 
 img {
@@ -213,12 +230,11 @@ footer {
     }
 
     .feature {
-        padding-right: 100px;
+        padding: 100px;
     }
 
     .feature.flex-md-row-reverse {
-        padding-left: 100px;
-        padding-right: 0;
+        padding: 100px;
     }
 
     .about-section {
