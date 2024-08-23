@@ -20,6 +20,7 @@ body {
     width: 100%;
 }
 
+
 .accordion-button {
     background-color: var(--darkest-color);
     color: white;
@@ -274,3 +275,47 @@ footer {
         padding-bottom: 15px;
     }
 }
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .container h1 {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+  }
+  
+  .container li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+  
+  .container li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  
+  
+  @media all and (max-width: 768px) {
+    .container h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+    
+    .container li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+    
+    .container li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
+  }
+  
+  
+
+  
+  
